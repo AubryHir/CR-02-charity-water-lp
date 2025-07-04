@@ -311,3 +311,177 @@ body {
     margin: 5px 0;
   }
 }
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles for desktop */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f5f7f3;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links .sign-in {
+  font-weight: bold;
+}
+
+/* Hero section layout */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 40px;
+  background-color: #ffffff;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #a05e2b;
+}
+
+.hero-text h1 span {
+  font-style: italic;
+  color: #dc8146;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ffd23f;
+  color: #000;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffb800;
+}
+
+/* Hero image */
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ------------------------ */
+/* Media Queries for Mobile */
+/* ------------------------ */
+
+/*
+  This media query targets devices with a max width of 768px.
+  It's commonly used to adjust styles for tablets and smartphones.
+*/
+@media (max-width: 768px) {
+
+  /* Stack nav links vertically and shrink padding for smaller screens */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  /* Stack hero section content vertically (image on top or bottom) */
+  .hero {
+    flex-direction: column-reverse;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+}
+
+/*
+  Optional: This media query helps with very small phones (like iPhone SE).
+  You can use this to further reduce font sizes or padding if needed.
+*/
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}

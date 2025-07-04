@@ -45,7 +45,7 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('https://https://cdn2.dropmarkusercontent.com/52043/27acaeb14fd7d46f0e38c7e1f556c0971348e71a/20170302-IMG_6802-3.jpg?Expires=1751617103&Signature=aCWcR18s7p2PMyF8TkZjKg8ZQJLpQUEhAYQL038L3GBbi-7bIjvSLpunOCqIjuWgH~Whh82ApuAXAa1~41oJvQjfzFTC2U7g30QeU5bUWxLpEiK~HgpGMsu24drMtt4js9K8UOG0~7sSybp4vHWbB3ZcGybBAbDf4CAAX7HEGX3TbPshMA7GYjTzE-G1mjODQbM6LBIQCq7usn1cJEjjsxxhw8OgFjgSSRnAIA97LfUmDqaf5L5uCX4jWmmtj7US0mzBDOURraUsuyo6xTeW3ZUpR6ZRgz5MITCqD1dJLoS7z1wVLYI-hWzFxrFWgSGCZ5BRC9wYrUFe-lSnqx6ODw__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;

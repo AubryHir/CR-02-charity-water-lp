@@ -5,18 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>charity: water</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Hamburger menu toggle for beginners
+    function toggleMenu() {
+      var nav = document.querySelector('.nav-links');
+      nav.classList.toggle('open');
+      var icon = document.querySelector('.hamburger');
+      icon.classList.toggle('open');
+    }
+  </script>
 </head>
 <body>
   <header class="navbar">
     <div class="logo">
       <img src="img/cw_logo-2.png" alt="charity: water logo">
     </div>
-    <nav class="nav-links">
-      <a href="#">About Us</a>
-      <a href="#">Current Projects</a>
-      <a href="#">Ways to Take Action</a>
-      <a href="#" class="sign-in">SIGN IN</a>
-    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <!-- About Us Dropdown (desktop) and simple link (mobile) -->
+      <div class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-content">
+          <a href="#">The 100% Pledge</a>
+          <a href="#">Meet The Team</a>
+          <a href="#">Our Financials</a>
+        </div>
+      </div>
+      <a href="#" class="mobile-link">About Us</a>
+      <!-- Current Projects Dropdown (desktop) and simple link (mobile) -->
+      <div class="dropdown">
+        <a href="#">Current Projects</a>
+        <div class="dropdown-content">
+          <a href="#">Projects Map</a>
+          <a href="#">Sustainable Sensor Data</a>
+          <a href="#">Stories from The Field</a>
+        </div>
+      </div>
+      <a href="#" class="mobile-link">Current Projects</a>
+      <!-- Ways to Take Action Dropdown (desktop) and simple link (mobile) -->
+      <div class="dropdown">
+        <a href="#">Ways to Take Action</a>
+        <div class="dropdown-content">
+          <a href="#">Join The Spring</a>
+          <a href="#">Fundraise</a>
+          <a href="#">Create an Account</a>
+        </div>
+      </div>
+      <a href="#" class="mobile-link">Ways to Take Action</a>
+    </div>
+    <a href="#" class="sign-in">Sign In</a>
   </header>
 
   <main class="hero">

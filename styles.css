@@ -1,3 +1,225 @@
+/* Make Sign In look like a button on large screens */
+/* Make Sign In look like a button and interactive on all screens */
+.sign-in {
+  background: #FFC907;
+  color: #1A1A1A !important;
+  padding: 10px 28px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  border: 2px solid #FFC907;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Dropdown menu styles for navigation (default: hidden, only shown in min-width: 1201px) */
+.dropdown {
+  display: none;
+}
+.dropdown-content {
+  display: none;
+}
+.sign-in:hover {
+  background: #e6b70d;
+  color: #1A1A1A !important;
+  border: 2px solid #e6b70d;
+  transform: scale(1.06);
+}
+/* Hamburger menu styles for mobile and half-screen desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  margin-left: 16px;
+  z-index: 120;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #1A1A1A;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+  .hamburger {
+    display: flex;
+    margin-left: 32px;
+  }
+  .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    right: 20px;
+    background: #FFF7E1;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    min-width: 220px;
+    max-width: calc(100vw - 40px);
+    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+    border-radius: 10px;
+    padding: 18px 0 18px 0;
+    z-index: 15;
+  }
+  .sign-in {
+    position: absolute;
+    top: 18px;
+    right: 32px;
+    display: inline-block !important;
+    background: #FFC907;
+    color: #1A1A1A;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+    z-index: 30;
+  }
+  .nav-links.open {
+    display: flex !important;
+  }
+  .nav-links a {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 1.1em;
+  }
+  .nav-links a:hover {
+    background: #FFC907;
+    color: #BF6C46;
+  }
+  .dropdown, .dropdown-content {
+    display: none !important;
+  }
+  .mobile-link {
+    display: block !important;
+    text-align: right;
+    padding-right: 32px;
+    padding-left: 32px;
+    box-sizing: border-box;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mobile-link:hover {
+    background: #FFC907;
+    color: #BF6C46;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  /* Show dropdown when hovering over the parent or the dropdown itself */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF7E1;
+    min-width: 160px;
+    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+    border-radius: 8px;
+    z-index: 10;
+    margin-top: 8px;
+    left: 0;
+  }
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  .dropdown-content:hover,
+  .dropdown-content:focus {
+    display: block;
+  }
+  .dropdown-content a {
+    color: #1A1A1A;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 6px;
+  }
+  .dropdown-content a:hover {
+    background-color: #FFC907;
+    color: #BF6C46;
+  }
+  .mobile-link {
+    display: none !important;
+  }
+}
+/* Show dropdowns only on screens wider than 1200px */
+@media (min-width: 1201px) {
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  /* Show dropdown when hovering over the parent or the dropdown itself */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF7E1;
+    min-width: 160px;
+    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+    border-radius: 8px;
+    z-index: 10;
+    margin-top: 8px;
+    left: 0;
+  }
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  .dropdown-content:hover,
+  .dropdown-content:focus {
+    display: block;
+  }
+  .dropdown-content a {
+    color: #1A1A1A;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 6px;
+  }
+  .dropdown-content a:hover {
+    background-color: #FFC907;
+    color: #BF6C46;
+  }
+  .mobile-link {
+    display: none !important;
+  }
+}
+}
+/* Dropdown menu styles for navigation (default: hidden, only shown in min-width: 1201px) */
+.dropdown {
+  display: none;
+}
+.dropdown-content {
+  display: none;
+}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -24,22 +246,20 @@ Fonts:
 */
 
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  /* Set the background color for the whole page */
+  background-color: #fff; /* Use white for a clean look */
+  /* Set the main font for the page */
   font-family: 'Proxima Nova', 'Avenir';
+  /* Remove default margin and padding */
   margin: 0;
   padding: 0;
-  color: #222;
+  /* Set the main text color */
+  color: #333;
+  /* Make text easier to read */
   line-height: 1.6;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
-}
+/* Section base styles (border-radius and shadow) are now handled by each section class for clarity. */
 
 /* Hero Section Styles */
 /*
@@ -61,21 +281,7 @@ section {
   /* No overlay or blend mode, so the image shows clearly */
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-}
-
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
+/* .hero h1 and .hero p rules removed above, now only .hero-text h1 and .hero-text p are used. */
 
 /* Story Section Styles */
 .story {
@@ -83,6 +289,9 @@ section {
   color: #222;
   text-align: center;
   padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  margin: 24px 10px;
 }
 
 /* Add accent color to section headings */
@@ -98,9 +307,12 @@ h2 {
   color: #222;
   text-align: center;
   padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  margin: 24px 10px;
 }
 
-/* Style the impact story image */
+/* Impact Section Styles */
 .impact-image {
   width: 100%;
   max-width: 320px;
@@ -109,7 +321,18 @@ h2 {
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
+
 /* Donate Button Styles */
+.donation-section {
+  background-color: #fff;
+  color: #222;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  margin: 24px 10px;
+}
+
 .donate-button {
   display: inline-block;
   background-color: #4FCB53; /* Green */
@@ -126,16 +349,12 @@ h2 {
   cursor: pointer;
 }
 
-/* Change button color when hovered */
 .donate-button:hover {
   background-color: #159A48; /* Dark Green */
   transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
-}
+
 
 /* 
   Media Queries for Responsive Design
@@ -206,12 +425,7 @@ section {
 }
 
 /* Global Styles */
-body {
-  font-family: 'Proxima Nova', 'Avenir';
-  color: #333;
-  background-color: #fff;
-  line-height: 1.6;
-}
+/* (Removed duplicate body selector. All body styles are now above.) */
 
 /* Header */
 .navbar {
@@ -219,9 +433,104 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #FFF7E1; /* soft pale green base */
-  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* light texture */
+  background-color: #FFF7E1;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
   background-repeat: repeat;
+  position: relative; /* Ensure absolutely positioned children are anchored */
+  z-index: 100;
+}
+
+/* Responsive navbar layout for screens 1200px or less */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .logo {
+    order: 0;
+  }
+  .hamburger {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+    position: static;
+    z-index: 120;
+  }
+  .sign-in {
+    order: 2;
+    margin-left: 16px;
+    margin-right: 0;
+    position: static;
+    z-index: 130;
+    display: inline-block !important;
+  }
+  .nav-links {
+    order: 3;
+  }
+}
+
+/* On screens wider than 1200px, put nav-links next to sign-in button */
+@media (min-width: 1201px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 40px;
+  }
+  .logo {
+    margin-right: 32px;
+  }
+  .nav-links {
+    order: 1;
+    margin-left: auto;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .sign-in {
+    order: 2;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .hamburger {
+    display: flex !important;
+    z-index: 120;
+  }
+  .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #FFF7E1;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+    border-radius: 10px;
+    padding: 18px 0 18px 0;
+    z-index: 102;
+  }
+  .nav-links.open {
+    display: flex !important;
+  }
+  .nav-links a {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 1.1em;
+  }
+  .nav-links a:hover {
+    background: #FFC907;
+    color: #BF6C46;
+  }
+  /* ...existing code... */
 }
 
 .logo img {
@@ -268,7 +577,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color: #BF6C46; /* Updated to requested color */
   margin-bottom: 20px;
 }
@@ -279,7 +588,7 @@ body {
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 30px;
   color: #BF6C46; /* Updated subheader color */
 }
@@ -302,7 +611,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 24px; /* a little less round */
-  border: 2.5px solid #efbd07; /* Thin outline */
+  border: 2.5px solid #FFC907; /* Thin outline */
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin: 0;
   z-index: 2;
@@ -341,7 +650,7 @@ body {
     border-radius: 26px;  /* 10% bigger than 24px */
   }
   .nav-links a:hover {
-    color: #bf9900;
+    color: #e6b70d;
     background: none;
     transform: scale(1.06); /* Slightly expand the link (6% bigger) */
     transition: color 0.2s, transform 0.2s;
@@ -387,7 +696,8 @@ body {
 
 /* Reinstate the 4% expansion of the CTA button when hovered */
 .cta-button:hover {
-  background-color: #ffb800;
+  background-color: #e6b70d;
+  border: 2.5px solid #e6b70d; /* Change border color to match background on hover */
   /* Make the CTA button expand a little when hovered */
   transform: scale(1.04); /* Slightly bigger on hover */
   /* Beginner tip: scale(1.04) means 4% bigger */

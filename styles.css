@@ -1,46 +1,3 @@
-/*
-  Make the CTA button much longer on fullscreen desktop (1201px and up)
-  This only affects very large screens, not tablets or mobile.
-*/
-/*
-  Make the CTA button even longer and 10% bigger on fullscreen desktop (1201px and up)
-  - Even longer: more horizontal padding
-  - 10% bigger: increase font size, padding, and border-radius by 10%
-  - Only affects very large screens
-*/
-@media (min-width: 1201px) {
-  .cta-button {
-    padding-left: 100px;  /* even longer left side */
-    padding-right: 100px; /* even longer right side */
-    font-size: 1.1em;     /* 10% bigger than base */
-    padding-top: 11px;    /* 10% bigger than 10px */
-    padding-bottom: 11px; /* 10% bigger than 10px */
-    border-radius: 26px;  /* 10% bigger than 24px */
-  }
-}
-@media (max-width: 1200px) {
-  .cta-button {
-    position: static;
-    width: auto;
-    margin: 30px 0 0 0;
-    text-align: center;
-    right: auto;
-    bottom: auto;
-    display: block;
-    align-self: flex-start;
-  }
-  .nav-links {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Align links to the right */
-    text-align: right;     /* Align text to the right */
-    margin-top: 10px;
-  }
-  .nav-links a {
-    margin: 5px 0;
-  }
-}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -66,13 +23,13 @@ Fonts:
   This CSS uses the provided color palette and beginner-friendly styles.
 */
 
-/* Set up the main font and background color for the whole page */
 body {
   background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Proxima Nova', 'Avenir';
   margin: 0;
   padding: 0;
   color: #222;
+  line-height: 1.6;
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
@@ -250,7 +207,7 @@ section {
 
 /* Global Styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Proxima Nova', 'Avenir';
   color: #333;
   background-color: #fff;
   line-height: 1.6;
